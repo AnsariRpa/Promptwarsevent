@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Crowd Management System</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;600;700&family=Inter:wght@400;500&display=swap"
+    rel="stylesheet">
+</head>
+
+<body>
+  <header>
+    <h1>CROWD_CTRL</h1>
+    <div id="connection-status" aria-label="Connection Status">● Live</div>
+  </header>
+
+  <main>
+    <!-- Map Container -->
+    <div id="map-container" aria-label="Venue Map" role="application">
+      <!-- Mock Map Representation for visual purposes -->
+      <div class="mock-map">
+        <!-- Environmental Background (CSS trees/grass effect) -->
+        <div class="environment-bg"></div>
+
+        <!-- Roads -->
+        <div class="road vertical top-road"></div>
+        <div class="road vertical bottom-road"></div>
+        <div class="road horizontal left-road"></div>
+        <div class="road horizontal right-road"></div>
+        <div class="road diagonal road-tl"></div>
+        <div class="road diagonal road-tr"></div>
+        <div class="road diagonal road-bl"></div>
+        <div class="road diagonal road-br"></div>
+
+        <!-- Stadium Structure -->
+        <div class="stadium-structure">
+          <div class="stadium-seating"></div>
+          <div class="stadium-pitch">
+            <div class="pitch-center-line"></div>
+            <div class="pitch-center-circle"></div>
+            <div class="pitch-penalty-left"></div>
+            <div class="pitch-penalty-right"></div>
+          </div>
+        </div>
+
+        <!-- Top Left Concourse -->
+        <div class="map-node" id="node-parking" style="top: 26%; left: 18%;" aria-label="Parking Area" tabindex="0">
+          <span class="icon">🅿️</span>
+          <div class="node-info"><div class="node-name">Parking Area</div><div class="node-density-container"><span class="density-val">0</span>%</div></div>
+        </div>
+        <!-- Outside Top Center-Left -->
+        <div class="map-node" id="node-cab-pickup" style="top: 6%; left: 35%;" aria-label="Cab Pick Up" tabindex="0">
+          <span class="icon">🚕</span>
+          <div class="node-info"><div class="node-name">Cab Pick Up</div><div class="node-density-container"><span class="density-val">0</span>%</div></div>
+        </div>
+        <!-- Top Gate on Boundary -->
+        <div class="map-node" id="node-gate-north" style="top: 18%; left: 50%;" aria-label="North Gate" tabindex="0">
+          <span class="icon">🚪</span>
+          <div class="node-info"><div class="node-name">North Gate</div><div class="node-density-container"><span class="density-val">0</span>%</div></div>
+        </div>
+        <!-- Outside Top Center-Right -->
+        <div class="map-node" id="node-metro-station" style="top: 6%; left: 65%;" aria-label="Metro Station" tabindex="0">
+          <span class="icon">🚇</span>
+          <div class="node-info"><div class="node-name">Metro Station</div><div class="node-density-container"><span class="density-val">0</span>%</div></div>
+        </div>
+        <!-- Top Right Concourse -->
+        <div class="map-node" id="node-first-aid" style="top: 26%; left: 82%;" aria-label="First Aid Center" tabindex="0">
+          <span class="icon">⚕️</span>
+          <div class="node-info"><div class="node-name">First Aid Center</div><div class="node-density-container"><span class="density-val">0</span>%</div></div>
+        </div>
+        
+        <!-- Left / Right Gates on Boundary -->
+        <div class="map-node" id="node-gate-west" style="top: 50%; left: 8%;" aria-label="West Gate" tabindex="0">
+          <span class="icon">🚪</span>
+          <div class="node-info"><div class="node-name">West Gate</div><div class="node-density-container"><span class="density-val">0</span>%</div></div>
+        </div>
+        <div class="map-node" id="node-gate-east" style="top: 50%; left: 92%;" aria-label="East Gate" tabindex="0">
+          <span class="icon">🚪</span>
+          <div class="node-info"><div class="node-name">East Gate</div><div class="node-density-container"><span class="density-val">0</span>%</div></div>
+        </div>
+
+        <!-- Bottom Left Concourse -->
+        <div class="map-node" id="node-merch" style="top: 74%; left: 18%;" aria-label="Merchandise Store" tabindex="0">
+          <span class="icon">🛍️</span>
+          <div class="node-info"><div class="node-name">Merchandise</div><div class="node-density-container"><span class="density-val">0</span>%</div></div>
+        </div>
+        <!-- Bottom Concourse Center-Left -->
+        <div class="map-node" id="node-food-1" style="top: 74%; left: 35%;" aria-label="Food Stall 1" tabindex="0">
+          <span class="icon">🍔</span>
+          <div class="node-info"><div class="node-name">Food Stall 1</div><div class="node-density-container"><span class="density-val">0</span>%</div></div>
+        </div>
+        <!-- Outside Bottom Center -->
+        <div class="map-node" id="node-bus-station" style="top: 94%; left: 50%;" aria-label="Bus Station" tabindex="0">
+          <span class="icon">🚌</span>
+          <div class="node-info"><div class="node-name">Bus Station</div><div class="node-density-container"><span class="density-val">0</span>%</div></div>
+        </div>
+        <!-- Bottom Gate on Boundary -->
+        <div class="map-node" id="node-gate-south" style="top: 82%; left: 50%;" aria-label="South Gate" tabindex="0">
+          <span class="icon">🚪</span>
+          <div class="node-info"><div class="node-name">South Gate</div><div class="node-density-container"><span class="density-val">0</span>%</div></div>
+        </div>
+        <!-- Bottom Concourse Center-Right -->
+        <div class="map-node" id="node-fan-booth" style="top: 74%; left: 65%;" aria-label="Fan Booth" tabindex="0">
+          <span class="icon">🎪</span>
+          <div class="node-info"><div class="node-name">Fan Booth</div><div class="node-density-container"><span class="density-val">0</span>%</div></div>
+        </div>
+        <!-- Bottom Right Concourse -->
+        <div class="map-node" id="node-food-2" style="top: 74%; left: 82%;" aria-label="Food Stall 2" tabindex="0">
+          <span class="icon">🍕</span>
+          <div class="node-info"><div class="node-name">Food Stall 2</div><div class="node-density-container"><span class="density-val">0</span>%</div></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- AI Recommendation Panel -->
+    <section class="panel" aria-labelledby="ai-heading">
+      <h2 id="ai-heading">AI Routing Assistant</h2>
+      <div class="input-group">
+        <label for="intent-input" class="sr-only">Where do you want to go?</label>
+        <input type="text" id="intent-input" placeholder="e.g. Fastest exit" aria-label="Where do you want to go?"
+          tabindex="0">
+        <button id="ask-ai-btn" aria-label="Ask AI for route" tabindex="0">Ask AI</button>
+      </div>
+      <div id="ai-response" role="status" aria-live="polite"></div>
+    </section>
+
+    <!-- Incidents Panel -->
+    <section class="panel" aria-labelledby="incidents-heading">
+      <h2 id="incidents-heading">System Alerts</h2>
+      <ul id="incidents-list" role="list" aria-live="assertive">
+        <li>No active incidents.</li>
+      </ul>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+
+</html>
