@@ -83,14 +83,24 @@ Edge case handling:
 
 ## Accessibility
 
-* ARIA labels for better screen reader support
-* Keyboard navigation support
-* High contrast UI for readability
-* Gender-neutral icons for inclusive design
+ARIA labels for better screen reader support
+Keyboard navigation support
+High contrast UI for readability
+Gender-neutral icons for inclusive design
 
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-## ### How to Run Locally
+## Tech Stack
+
+Frontend: HTML, CSS, JavaScript (Vanilla)
+Backend: Node.js (Express)
+Deployment: Google Cloud Run
+Containerization: Docker
+Real-time Simulation: Custom Node.js event engine
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+  
+## How to Run Locally
 
 1. Go to backend folder:
    cd backend
