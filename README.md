@@ -5,7 +5,7 @@ AI-powered Smart Stadium Assistant that improves crowd movement, reduces wait ti
 
 ## Problem Statement
 
-In large sports stadiums, a lot of people often face issues like heavy crowd movement struggle, long waiting times at food stalls and restrooms, and no real-time information at all. This creates hectic situation, confusion and reduces the overall event experience.
+In large sports stadiums, a lot of people often face issues and struggle e heavy crowd movement, long waiting times at food stalls and restrooms, and no real-time information at all. This creates hectic situation, confusion and reduces the overall event experience.
 
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
