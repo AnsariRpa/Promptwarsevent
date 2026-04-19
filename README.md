@@ -5,7 +5,7 @@ AI-powered Smart Stadium Assistant that improves crowd movement, reduces wait ti
 
 ## Problem Statement
 
-In large sports stadiums, a lot of people often face issues and struggle e heavy crowd movement, long waiting times at food stalls and restrooms, and no real-time information at all. This creates hectic situation, confusion and reduces the overall event experience.
+In large events/summits/sports stadiums/venues, a lot of people often face issues and struggle with heavy crowd movement, long waiting times at food stalls and restrooms, and no real-time information at all. This creates hectic situation, confusion and reduces the overall event experience.
 
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -15,12 +15,12 @@ Smart Stadium AI Assistant is a simple lightweight web application that improves
 
 The system helps users:
 
-* Avoid crowded areas and stay away
-* Find quicker and faster routes inside the stadium
+* Avoid crowded areas and stay away from them
+* Find quicker and faster routes inside and around the stadium
 * Reduce waiting time at queues
 * Get real-time alerts and suggestions
 
-Even without live data, the system simulates real-world scenarios to demonstrate how such a solution would work in actual stadium environments.
+Even without live data, the system simulates real-world scenarios to demonstrate how such a solution would work in actual environments.
 
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 ## Architecture
@@ -90,19 +90,19 @@ Edge case handling:
 
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-## How to Run
+## ### How to Run Locally
 
 1. Go to backend folder:
-
-   ```
    cd backend
+
+2. Install dependencies:
    npm install
+
+3. Start the server:
    npm start
-   ```
 
-2. Open frontend:
-
-   * Open `frontend/index.html` in browser
+4. Open in browser:
+   http://localhost:3000
 
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
